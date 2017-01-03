@@ -35,4 +35,4 @@ RUN wget https://github.com/markriggins/dockerfy/releases/download/0.2.4/dockerf
     tar -C /usr/local/bin -xvzf dockerfy-linux-amd64-*tar.gz; \
     rm dockerfy-linux-amd64-*tar.gz;
     
-ENTRYPOINT ["/usr/sbin/crond -f -L 8"]
+#ENTRYPOINT ["/usr/sbin/crond -f -L 8"]
