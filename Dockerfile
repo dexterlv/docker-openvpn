@@ -34,3 +34,8 @@ ADD ./otp/openvpn /etc/pam.d/
 RUN wget https://github.com/markriggins/dockerfy/releases/download/0.2.4/dockerfy-linux-amd64-0.2.4.tar.gz; \
     tar -C /usr/local/bin -xvzf dockerfy-linux-amd64-*tar.gz; \
     rm dockerfy-linux-amd64-*tar.gz;
+    
+ENTRYPOINT dockerfy 
+COMMAND --start bash -c "while true; do echo BLINK; sleep 1; done" -- \
+    --reap -- \
+    dnsmasq 
