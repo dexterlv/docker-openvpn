@@ -36,6 +36,6 @@ RUN wget https://github.com/markriggins/dockerfy/releases/download/0.2.4/dockerf
     rm dockerfy-linux-amd64-*tar.gz;
     
 ENTRYPOINT dockerfy 
-COMMAND --start bash -c "while true; do echo BLINK; sleep 1; done" -- \
+CMD --start bash -c "while true; do echo BLINK; sleep 1; done" -- \
     --reap -- \
     dnsmasq 
