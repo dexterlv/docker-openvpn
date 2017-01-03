@@ -35,7 +35,4 @@ RUN wget https://github.com/markriggins/dockerfy/releases/download/0.2.4/dockerf
     tar -C /usr/local/bin -xvzf dockerfy-linux-amd64-*tar.gz; \
     rm dockerfy-linux-amd64-*tar.gz;
     
-ENTRYPOINT ["dockerfy  \
-    --run rm -rf /tmp/* -- \
-    --run bash -c "sleep 10, echo 'Lets get started now'" -- \
-    dnsmasq --"  ]
+ENTRYPOINT ["dockerfy",  "dnsmasq"]
