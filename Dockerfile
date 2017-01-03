@@ -24,6 +24,7 @@ VOLUME ["/etc/openvpn"]
 EXPOSE 1194/udp
 
 CMD ["ovpn_run"]
+CMD ["dnsmasq"]
 
 ADD ./bin /usr/local/bin
 RUN chmod a+x /usr/local/bin/*
